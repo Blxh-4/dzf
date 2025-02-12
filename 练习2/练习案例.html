@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>戴钊帆豪华吐槽大会</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ff4500;
+            font-size: 3em;
+            animation: bounce 2s infinite;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ff3b2f;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .floating-text {
+            position: absolute;
+            font-size: 1.2em;
+            color: #555;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>戴钊帆豪华吐槽大会</h1>
+    <p>欢迎来到<span class="highlight">戴钊帆</span>的专属吐槽页面！</p>
+    <p>他是那种<span class="highlight">吃饭掉筷子，走路撞门框</span>的神奇存在。</p>
+    <p>脑子里的想法比<span class="highlight">天上的星星</span>还多，可惜没一个能实现。</p>
+    <p>不过，谁让他是<span class="highlight">我朋友</span>呢？</p>
+    <p>算了算了，骂归骂，该帮还得帮！</p>
+    <p>戴钊帆，<span class="highlight">你真是个笨蛋</span>！</p>
+
+    <button class="button" onclick="showRandomQuote()">点击获取随机吐槽</button>
+    <p id="random-quote" style="font-size: 1.2em; color: #555; margin-top: 20px;"></p>
+
+    <!-- 浮动文字 -->
+    <div class="floating-text" style="top: 10%; left: 5%;">掉筷子大师</div>
+    <div class="floating-text" style="top: 20%; right: 10%;">撞门框冠军</div>
+    <div class="floating-text" style="top: 50%; left: 15%;">脑洞比黑洞大</div>
+    <div class="floating-text" style="top: 70%; right: 5%;">搞笑界扛把子</div>
+
+    <script>
+        const quotes = [
+            "戴钊帆，你是不是把智商都用来搞笑了？",
+            "戴钊帆，你的脑洞是不是被黑洞吸走了？",
+            "戴钊帆，你走路能不能别跟企鹅似的？",
+            "戴钊帆，你是不是把运气都用来遇见我了？",
+            "戴钊帆，你真是个笨蛋！",
+            "戴钊帆，你是不是把筷子当成了魔法棒？",
+            "戴钊帆，你的存在就是为了证明世界有多奇妙！"
+        ];
+
+        function showRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('random-quote').textContent = quotes[randomIndex];
+        }
+    </script>
+</body>
+
+</html>
